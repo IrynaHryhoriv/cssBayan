@@ -1,0 +1,102 @@
+/* # The Rotating Marker # */
+details summary::-webkit-details-marker { display: none; }
+summary::before {
+  /* font-family: "Hiragino Mincho ProN", "Open Sans", sans-serif; */
+  content: "▶";
+  position: absolute;
+  top: 1rem;
+  left: 0.8rem;
+  transform: rotate(0);
+  transform-origin: center;
+  transition: 0.2s transform ease;
+}
+details[open] > summary:before {
+  transform: rotate(90deg);
+  transition: 0.45s transform ease;
+}
+
+/* # Style 3 # */
+details.style3 summary::before {
+  content: "›";
+  font-size: 2.5rem;
+  line-height: 1rem;
+  top: 1.3rem;
+  left: 0rem;
+  margin: -0.5rem -0.5rem 0 0.5rem;
+  transform-origin: bottom center;
+  transition: margin linear 0.05s;
+}
+details.style3:hover > summary:before {
+  color: #FFF;
+}
+details[open].style3 > summary:before {
+  left: 0rem;
+  color: #CCC;
+  transform: rotate(90deg);
+  margin-left: 0.4rem;
+  transition: color ease 2s, transform ease 1s, margin ease 1s;
+}
+@supports (-webkit-touch-callout: none) {
+  details.style3 summary::before { top: 1.6rem; }
+  details[open].style3 > summary:before { top: 1.3rem; transition: all 0.8s; }
+}
+
+
+img {
+    display:block;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img:hover {
+   transform: scale(1.1);
+}
+
+p { margin-left: auto; 
+    margin-right: auto;
+}
+p:last-child { padding: 0; 
+}
+
+details {
+  max-width: 500px;
+  box-sizing: border-box;
+  margin:auto;
+  background: white;
+}
+summary {
+  border: 4px solid transparent;
+  outline: none;
+  padding: 1rem;
+  display: block;
+  background: #666;
+  color: white;
+  padding-left: 2.2rem;
+  position: relative;
+  cursor: pointer;
+}
+details[open] summary,
+summary:hover {
+  color: #FFCA28;
+  background: #444;
+}
+summary:hover strong,
+details[open] summary strong,
+summary:hover::before,
+details[open] summary::before {
+  color: #FFA128;
+}
+.content {
+  padding: 10px;
+  border: 2px solid #888;
+  border-top: none;
+}
+
+summary:hover strong, details[open] summary strong, summary:hover::before, details[open] summary::before {
+    color: #FFA128;
+}
+
+details[open] summary, summary:hover {
+    color: #FFCA28;
+    background: #444;
+}
