@@ -36,6 +36,19 @@ details[open].style3 > summary:before {
   margin-left: 0.4rem;
   transition: color ease 2s, transform ease 1s, margin ease 1s;
 }
+
+/* # Style */
+details.style1 summary::before {
+  content: "";
+  font-size: 2.5rem;
+  line-height: 1rem;
+  top: 1.3rem;
+  left: 0rem;
+  margin: -0.5rem -0.5rem 0 0.5rem;
+  transform-origin: bottom center;
+  transition: margin linear 0.05s;
+}
+
 @supports (-webkit-touch-callout: none) {
   details.style3 summary::before { top: 1.6rem; }
   details[open].style3 > summary:before { top: 1.3rem; transition: all 0.8s; }
@@ -134,4 +147,9 @@ details[open] summary, summary:hover {
   body {
     background-color: rgb(232, 233, 231);
   }
+}
+
+.header {
+  margin-left: auto; 
+  margin-right: auto;
 }
