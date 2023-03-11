@@ -48,9 +48,25 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
-.img:hover {
-   transform: scale(1.1);
+
+img{
+  justify-content: center;
+  align-items: center;
+
 }
+img{
+  transition: transform .2s;
+
+  margin:0 auto;
+  background-color: rgb(173, 173, 237);
+  border-radius: 10px;
+ 
+}
+img:hover{
+  transform:scale(1.2);
+}
+
+
 
 p { margin-left: auto; 
     margin-right: auto;
@@ -103,7 +119,7 @@ details[open] summary, summary:hover {
 
 @media screen and (min-width: 320px) {
   body {
-    background-color: #ffca28;
+    background-color: #edece9;
   }
 }
 
