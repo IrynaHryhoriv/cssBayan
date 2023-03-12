@@ -1,3 +1,4 @@
 # cssBayan
 
-https://IrynaHryhoriv.github.io/cssBayan/cssBayan/index.html
+https://irynahryhoriv.github.io/cssBayan/
+
